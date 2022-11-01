@@ -96,3 +96,20 @@ var name = "Mark";
 console.log(window.name);
 let age = "20"; // in global scope, avoid SyntaxError bu sure same page can't statement same var with let
 console.log(window.let); // undefined
+
+// * for loop with var,let
+
+for (var i = 0; i < 5; ++i) {
+  // loop logic
+}
+// console.log(i); // 5
+
+for (let i = 0; i < 5; ++i) {
+  // loop logic
+}
+// console.log(i); // ReferenceError
+
+for (var i = 0; i < 5; ++i) {
+  // loop logic
+  setTimeout(() => console.log(i), 0); // 5,5,5,5,5
+}
