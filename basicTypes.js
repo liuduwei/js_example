@@ -614,3 +614,18 @@ console.log(baz instanceof Array);
 //TODO Symbol.unscopables
 
 // ! object
+// a set of data and funciton
+// * create method
+
+// 1
+let o = new Object(); // Object is base class
+// attribute ande method
+/* 
+  constructor:  construction funciton
+  hasOwnProperty(propertyName) :juge current object instance has given property
+  isPrototypeOf: juge current object if is Prototype of other
+  propertyIsEnumerable
+  toLocaleString()
+  toString()
+  valueOf()
+*/
