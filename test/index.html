@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="http://cdn.staticfile.org/webuploader/0.1.0/webuploader.html5only.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div id="uploader-demo">
+      <!--用来存放item-->
+      <div id="fileList" class="uploader-list"></div>
+      <div id="filePicker">选择图片</div>
+    </div>
+  </body>
+  <script>
+    var uploader = WebUploader.create({
+      // 选完文件后，是否自动上传。
+      auto: true,
+
+      // swf文件路径
+      swf: "/js/Uploader.swf",
+
+      // 文件接收服务端。
+      server: "http://webuploader.duapp.com/server/fileupload.php",
+
+      // 选择文件的按钮。可选。
+      // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+      pick: "#filePicker",
+
+      // 只允许选择图片文件。
+      accept: {
+        title: "Images",
+        extensions: "gif,jpg,jpeg,bmp,png",
+        mimeTypes: "image/*",
+      },
+    });
+  </script>
+</html>
